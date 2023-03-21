@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body onload="reset()">
+
+<div class="wrapper flex">
+  <main class="main flex">
+    <section class="display">
+      
+      <div class="back">
+        <div class="back__cvc" id="cvc-output">000</div>
+      </div>
+      
+      <div class="front flex">
+        <img class="front__logo" src="./assets/images/card-logo.svg" alt="">
+        <div class="card-no-display" id="card-no-output">0000 0000 0000 0000</div>
+        <div class="security-display flex">
+          <div class="name-display" id="full-name-output">JANE APPLESEED</div>
+          <div class="mmyy-display" id="mm-dd-output">00/00</div>
+        </div>
+      </div>
+      
+    </section>
+  
+    <div class="input__wrapper">
+      <section class="input" id="sec-two">
+        <h1 class="name">Cardholder Name</h1>
+        <input class="name-input" id="full-name-input" type="text" placeholder="e.g. Jane Appleseed">
+        <div class="warning" id="warning-name"></div>
+        <h2 class="card-no">Card Number</h2>
+        <input class="card-no-input" id="card-no-input"
+          type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+        <div class="warning" id="warning-card"></div>
+        <div class="security flex">
+          <div class="date flex">
+            <h2>Exp. Date (MM/YY)</h2>
+            <div class="date__input flex">
+              <div>
+                <input class="mm-input" id="mm-input" type="text" placeholder="MM" maxlength="2">
+                <div class="warning" id="warning-mm"></div>
+              </div>
+              <div>
+                <input class="yy-input" id="yy-input" type="text" placeholder="YY" maxlength="2">
+                <div class="warning" id="warning-yy"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cvc">
+            <h2>cvc</h2>
+            <input class="cvc-input" id="cvc-input" type="text" placeholder="e.g. 123" maxlength="3">
+            <div class="warning"  id="warning-cvc"></div>
+          </div>
+        </div>
+        <button class="btn" onclick="stageTwo()">Confirm</button>
+      </section>
+      <section class="completed" id="sec-three">
+        <img class="completed__img" src="./assets/images/icon-complete.svg" alt="">
+        <p class="completed__line-one">Thank you</p>
+        <p class="completed__line-two">We've added your card details</p>
+        <button class="completed__btn" onclick="reset()">Continue</button>
+      </section>
+    </div>
+
+  </main>
+</div>  
+
+</body>
+</html>
