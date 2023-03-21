@@ -75,22 +75,22 @@ button {
   min-height: 100vh;
 }
 .main {
-  width: 23.4375rem;
-  flex-shrink: 0;
+  position: relative;
+  align-self: center;
   flex-direction: column;
 }
 
 /* display section*/
 .display {
+  width: min(375px, 100%);
   height: 17.6875rem;
   background-image: url(./assets/images/bg-main-mobile.png);
   background-repeat: no-repeat;
-  background-position: cover;
   margin-bottom: 3rem;
+  margin-inline: auto;
 }
 .back {
   position: absolute;
-  overflow: hidden;
   width: 17.875rem;
   height: 9.8125rem;
   transform: translate(73px, 2rem);
